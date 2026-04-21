@@ -1,7 +1,20 @@
 [project]
 name = "simpledelatex"
 version = "0.1.0"
-description = "Add your description here"
+description = "A simple python package to remove selected commands from LaTeX"
 readme = "README.md"
 requires-python = ">=3.13"
 dependencies = []
+
+[project.scripts]
+simpledelatex = "simpledelatex.main:main"
+
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+package-dir = { "" = "src" }
+
+[tool.setuptools.packages.find]
+where = ["src"]
